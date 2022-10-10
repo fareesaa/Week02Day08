@@ -144,4 +144,16 @@ public class ModelAssignment2 {
 
         }
     }
+    public void tampilMhs(){
+        Set set = m.entrySet();
+        Iterator itr = set.iterator();
+        System.out.println("ID\tNama\tB.Inggris\tFisika\tAlgoritma");
+        while (itr.hasNext()){
+            Map.Entry entry= (Map.Entry)itr.next();
+            Mahasiswa mhs =(Mahasiswa) entry.getValue();
+
+            ArrayList nilai = mhs.getAlNilai();
+            System.out.println(entry.getKey()+"\t"+ mhs.getNama()+"\t"+nilai.get(0)+"\t"+nilai.get(1)+"\t"+nilai.get(2));
+        }
+    }
 }
