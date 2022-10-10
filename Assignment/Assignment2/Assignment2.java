@@ -7,6 +7,7 @@ public class Assignment2 {
         Scanner inputInt = new Scanner(System.in);
         int menu;
         do{
+            model2.loadDataFile();
             System.out.println("================");
             System.out.println("1.Buat Data Mahasiswa");
             System.out.println("2.Edit & Delete Data mahasiswa");
@@ -16,7 +17,7 @@ public class Assignment2 {
             menu = inputInt.nextInt();
             switch (menu){
                 case 1:
-                    model2.loadDataFile();
+                    
                     model2.addMhs();
                     break;
                 case 2:
@@ -32,6 +33,7 @@ public class Assignment2 {
                     }
                     break;
                 case 3:
+                    model2.tampilMhs();
                     break;
                 case 4:
                     System.out.println("===Program Selesai===");
