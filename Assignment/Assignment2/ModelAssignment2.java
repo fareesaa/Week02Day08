@@ -21,7 +21,7 @@ public class ModelAssignment2 {
             int x=0;
             String username = "";
             while(( x=fr1.read())!=-1){
-                uname = uname + (char)x;
+                username = username + (char)x;
             }
 
 
@@ -41,7 +41,7 @@ public class ModelAssignment2 {
             String regUname = "^[A-Za-z0-9+_.-]+@(.+)$";
             boolean regexUsername = Pattern.matches(regUname, uname);
             String regPass = ".{8,32}" + "[a-zA-z]*" + "\\w*";
-            boolean regexPassword = Pattern.matches(regPass, password);
+            boolean regexPassword = Pattern.matches(regPass, pass);
             boolean login ;
             if(regexUsername==true && regexPassword==true){
                 login = true;
@@ -50,7 +50,7 @@ public class ModelAssignment2 {
                 login = false;
             }
 
-            if(login==false && uname.equals(username) && pass.equals(password)){
+            if(login==true && uname.equals(username) && pass.equals(password)){
                 System.out.println("===Selamat login telah berhasil===");
             }
             else {
